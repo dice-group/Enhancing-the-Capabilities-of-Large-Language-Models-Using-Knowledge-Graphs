@@ -1,0 +1,340 @@
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "fin": "http://financial.com/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "app": "http://application.com/",
+    "pro": "http://process.com/",
+    "org1": "http://organization.com/",
+    "emp": "http://employee.com/"
+  },
+  "@graph":[
+    {
+      "@id":"http://application.com/Application",
+      "@type":"rdfs:Class",
+      "label":"Application"
+    },
+    {
+      "@id":"http://financial.com/Manager",
+      "@type":"rdfs:Class",
+      "label":"Manager",
+      "subClassOf":["https://schema.org/Person"]
+    },
+    {
+      "@id":"http://financial.com/ParentOrganization",
+      "@type":"rdfs:Class",
+      "label":"Parent Organization",
+      "subClassOf":["https://schema.org/Organization"]
+    },
+    {
+      "@id":"http://process.com/Process",
+      "@type":"rdfs:Class",
+      "label":"Process"
+    },
+    {
+      "@id":"https://schema.org/Organization",
+      "@type":"rdfs:Class",
+      "label":"Organization"
+    },
+    {
+      "@id":"https://schema.org/Person",
+      "@type":"rdfs:Class",
+      "label":"Person"
+    },
+    {
+      "@id":"http://application.com/accessLink",
+      "@type":"rdf:Property",
+      "label":"Access Link",
+      "domain":"http://application.com/Application",
+      "range":"rdfs:Literal"
+    },
+    {
+      "@id":"http://application.com/appDescription",
+      "@type":"rdf:Property",
+      "label":"Application Description",
+      "domain":"http://application.com/Application",
+      "range":"rdfs:Literal"
+    },
+    {
+      "@id":"http://application.com/appId",
+      "@type":"rdf:Property",
+      "label":"Application ID",
+      "domain":"http://application.com/Application",
+      "range":"rdfs:Literal"
+    },
+    {
+      "@id":"http://application.com/appImage",
+      "@type":"rdf:Property",
+      "label":"Application Image",
+      "domain":"http://application.com/Application",
+      "range":"rdfs:Literal"
+    },
+    {
+      "@id":"http://application.com/appLink",
+      "@type":"rdf:Property",
+      "label":"Application Link",
+      "domain":"http://application.com/Application",
+      "range":"rdfs:Literal"
+    },
+    {
+      "@id":"http://application.com/appName",
+      "@type":"rdf:Property",
+      "label":"Application Name",
+      "domain":"http://application.com/Application",
+      "range":"rdfs:Literal"
+    },
+    {
+      "@id":"http://application.com/hasOwner",
+      "@type":"rdf:Property",
+      "label":"Has Owner",
+      "domain":"http://application.com/Application",
+      "range":"https://schema.org/Person"
+    },
+    {
+      "@id":"http://application.com/managedBy",
+      "@type":"rdf:Property",
+      "label":"Managed By",
+      "domain":"http://application.com/Application",
+      "range":"https://schema.org/Person"
+    },
+    {
+      "@id":"http://application.com/manages",
+      "@type":"rdf:Property",
+      "label":"Manages",
+      "domain":"https://schema.org/Person",
+      "range":"http://application.com/Application"
+    },
+    {
+      "@id":"http://application.com/partOfOrg",
+      "@type":"rdf:Property",
+      "label":"Part of Organization",
+      "domain":"http://application.com/Application",
+      "range":"https://schema.org/Organization"
+    },
+    {
+      "@id":"http://application.com/partOfProcess",
+      "@type":"rdf:Property",
+      "label":"Application Part of Process",
+      "domain":"http://application.com/Application",
+      "range":"http://process.com/Process"
+    },
+    {
+      "@id":"http://process.com/description",
+      "@type":"rdf:Property",
+      "label":"Process Description",
+      "domain":"http://process.com/Process",
+      "range":"rdfs:Literal"
+    },
+    {
+      "@id":"http://process.com/hasApplication",
+      "@type":"rdf:Property",
+      "label":"Process Has Application",
+      "domain":"http://process.com/Process",
+      "range":"http://application.com/Application"
+    },
+    {
+      "@id":"http://process.com/hasChildProcess",
+      "@type":"rdf:Property",
+      "label":"Has Child Process",
+      "domain":"http://process.com/Process",
+      "range":"http://process.com/Process"
+    },
+    {
+      "@id":"http://process.com/hasOwner",
+      "@type":"rdf:Property",
+      "label":"Has Owner",
+      "domain":"http://process.com/Process",
+      "range":"https://schema.org/Person"
+    },
+    {
+      "@id":"http://process.com/managedBy",
+      "@type":"rdf:Property",
+      "label":"Managed By",
+      "domain":"http://process.com/Process",
+      "range":"https://schema.org/Person"
+    },
+    {
+      "@id":"http://process.com/manages",
+      "@type":"rdf:Property",
+      "label":"Person Manages Process",
+      "domain":"https://schema.org/Person",
+      "range":"http://process.com/Process"
+    },
+    {
+      "@id":"http://process.com/parentProcess",
+      "@type":"rdf:Property",
+      "label":"Parent Process",
+      "domain":"http://process.com/Process",
+      "range":"http://process.com/Process"
+    },
+    {
+      "@id":"http://process.com/partOfOrg",
+      "@type":"rdf:Property",
+      "label":"Part of Organization",
+      "domain":"http://process.com/Process",
+      "range":"https://schema.org/Organization"
+    },
+    {
+      "@id":"http://process.com/processId",
+      "@type":"rdf:Property",
+      "label":"Process ID",
+      "domain":"http://process.com/Process",
+      "range":"rdfs:Literal"
+    },
+    {
+      "@id":"http://process.com/referenceUrls",
+      "@type":"rdf:Property",
+      "label":"Reference URLs",
+      "domain":"http://process.com/Process",
+      "range":"rdfs:Literal"
+      },
+    {
+      "@id":"http://process.com/templateUrls",
+      "@type":"rdf:Property",
+      "label":"Template URLs",
+      "domain":"http://process.com/Process",
+      "range":"rdfs:Literal"
+    },
+    {
+      "@id":"http://process.com/title",
+      "@type":"rdf:Property",
+      "label":"Process Title",
+      "domain":"http://process.com/Process",
+      "range":"rdfs:Literal"
+    },
+    {
+      "@id":"http://process.com/description",
+      "@type":"rdf:Property",
+      "label":"Process Description",
+      "domain":"http://process.com/Process",
+      "range":"rdfs:Literal"
+    },
+    {
+      "@id":"http://process.com/hasApplication",
+      "@type":"rdf:Property",
+      "label":"Process Has Application",
+      "domain":"http://process.com/Process",
+      "range":"http://application.com/Application"
+    },
+    {
+      "@id":"http://process.com/hasChildProcess",
+      "@type":"rdf:Property",
+      "label":"Has Child Process",
+      "domain":"http://process.com/Process",
+      "range":"http://process.com/Process"
+    },
+    {
+      "@id":"http://process.com/hasOwner",
+      "@type":"rdf:Property",
+      "label":"Has Owner",
+      "domain":"http://process.com/Process",
+      "range":"https://schema.org/Person"
+    },
+    {
+      "@id":"http://process.com/managedBy",
+      "@type":"rdf:Property",
+      "label":"Managed By",
+      "domain":"http://process.com/Process",
+      "range":"https://schema.org/Person"
+    },
+    {
+      "@id":"http://process.com/manages",
+      "@type":"rdf:Property",
+      "label":"Person Manages Process",
+      "domain":"https://schema.org/Person",
+      "range":"http://process.com/Process"
+    },
+    {
+      "@id":"http://process.com/parentProcess",
+      "@type":"rdf:Property",
+      "label":"Parent Process",
+      "domain":"http://process.com/Process",
+      "range":"http://process.com/Process"
+    },
+    {
+      "@id":"http://process.com/partOfOrg",
+      "@type":"rdf:Property",
+      "label":"Part of Organization",
+      "domain":"http://process.com/Process",
+      "range":"https://schema.org/Organization"
+    },
+    {
+      "@id":"http://process.com/processId",
+      "@type":"rdf:Property",
+      "label":"Process ID",
+      "domain":"http://process.com/Process",
+      "range":"rdfs:Literal"
+    },
+    {
+      "@id":"http://process.com/referenceUrls",
+      "@type":"rdf:Property",
+      "label":"Reference URLs",
+      "domain":"http://process.com/Process",
+      "range":"rdfs:Literal"
+    },
+    {
+      "@id":"http://process.com/templateUrls",
+      "@type":"rdf:Property",
+      "label":"Template URLs",
+      "domain":"http://process.com/Process",
+      "range":"rdfs:Literal"
+    },
+    {
+      "@id":"http://process.com/title",
+      "@type":"rdf:Property",
+      "label":"Process Title",
+      "domain":"http://process.com/Process",
+      "range":"rdfs:Literal"
+    },
+    {
+      "@id":"https://schema.org/orgID",
+      "@type":"rdf:Property",
+      "label":"Organisation ID",
+      "domain":"https://schema.org/Organization",
+      "range":"rdfs:Literal"
+    },
+    {
+      "@id":"https://schema.org/parentOrganization",
+      "@type":"rdf:Property",
+      "label":"Parent Organization",
+      "domain":"https://schema.org/Organization",
+      "range":"http://financial.com/ParentOrganization"
+    },
+    {
+      "@id":"https://schema.org/sources",
+      "@type":"rdf:Property",
+      "label":"Sources",
+      "range":"rdfs:Literal"
+    },
+    {
+      "@id":"https://schema.org/status",
+      "@type":"rdf:Property",
+      "label":"Status",
+      "domain":"https://schema.org/Person",
+      "range":"rdfs:Literal"
+    },
+    {
+      "@id":"https://schema.org/telephone",
+      "@type":"rdf:Property",
+      "label":"Telephone",
+      "domain":"https://schema.org/Person",
+      "range":"rdfs:Literal"
+    },
+    {
+      "@id":"https://schema.org/userType",
+      "@type":"rdf:Property",
+      "label":"User Type",
+      "domain":"https://schema.org/Person",
+      "range":"rdfs:Literal"
+    },
+    {
+      "@id":"https://schema.org/worksFor",
+      "@type":"rdf:Property",
+      "label":"Works For",
+      "domain":"https://schema.org/Person",
+      "range":"https://schema.org/Organization"
+    }
+    ]
+  }
