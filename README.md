@@ -154,5 +154,8 @@ To automatically generate a `requirements.txt` file based on the libraries used 
 - Siemens Energy for providing computational resources and domain expertise.
 - University of Paderborn for academic support and guidance.
  
+## Contact
+For any questions or wishes, please contact:
+Anubhuti Singh at anubhuti@mail.uni-paderborn.de.
  
  
