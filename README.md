@@ -1,8 +1,6 @@
-# Enhancing the Capabilities of Large Language Models Using Knowledge Graphs in Finance
+# Subgraph Retrieval Augmented Generation over RDF Knowledge Graphs
 
-**Master’s Thesis** by Anubhuti Singh, April 2025  
-Paderborn University — Data Science Research Group
-
+This repository is originally named as **Enhancing the Capabilities of Large Language Models Using Knowledge Graphs in Finance**.
 ---
 
 ## Table of Contents
@@ -155,6 +153,8 @@ To automatically generate a `requirements.txt` file based on the libraries used 
 - University of Paderborn for academic support and guidance.
  
 ## Contact
+This work is mostly done by Anubhuti Singh during her **Master’s Thesis** submitted April 2025  
+
 For any questions or wishes, please contact:
 Anubhuti Singh at anubhuti@mail.uni-paderborn.de.
  
