@@ -31,7 +31,7 @@ This project investigates how integrating **Knowledge Graphs (KGs)** with **Larg
 
 ### Raw Data
 
-- **Source**: Four CSV/Excel tables (employees, organizations, applications, processes).  
+- **Source**: Eight CSV/Excel tables from four dimentions(employees, organizations, applications, processes).  
 - **Format**: original, un-anonymized tables—preserve full fidelity and FK relationships.  
 - **Location**: stored off-repo (internal).
 
